@@ -3,7 +3,7 @@ version: "3.8"
 services:
   database:
     image: postgres:12
-    container_name: pg_database
+    container_name: pg_database_2
     user: root
     ports: 
       - 5432:5432
