@@ -1,12 +1,3 @@
-# Домашнее задание к занятию 2. «SQL» - Сергей Ситкарёв
-
-## Задача 1
-
-Используя Docker, поднимите инстанс PostgreSQL (версию 12) c 2 volume, в который будут складываться данные БД и бэкапы.
-
-Приведите получившуюся команду или docker-compose-манифест.
-
-```yaml
 version: "3.8"
 
 services:
@@ -38,6 +29,3 @@ networks:
       driver: default
       config:
         - subnet: 172.30.240.0/24
-```
-
-![Задание1](https://github.com/SSitkarev/06-db-02-sql/blob/main/img/1.jpg)
