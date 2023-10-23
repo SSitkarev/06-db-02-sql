@@ -13,12 +13,12 @@ services:
   database:
     image: postgres:12
     container_name: pg_database
+    user: root
     ports: 
       - 5432:5432
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: netology
     volumes:
       - data:/var/lib/postgresql/data
       - backup:/var/lib/postgresql/backup
@@ -40,4 +40,39 @@ networks:
         - subnet: 172.30.240.0/24
 ```
 
-![Задание1](https://github.com/SSitkarev/06-db-02-sql/blob/main/img/1.jpg)
+## Задача 2
+
+В БД из задачи 1:
+
+создайте пользователя test-admin-user и БД test_db;
+
+в БД test_db создайте таблицу orders и clients (спeцификация таблиц ниже);
+
+предоставьте привилегии на все операции пользователю test-admin-user на таблицы БД test_db;
+
+создайте пользователя test-simple-user;
+
+предоставьте пользователю test-simple-user права на SELECT/INSERT/UPDATE/DELETE этих таблиц БД test_db.
+
+Приведите:
+
+итоговый список БД после выполнения пунктов выше;
+
+![Задание2](https://github.com/SSitkarev/06-db-02-sql/blob/main/img/2-1.jpg)
+
+описание таблиц (describe);
+
+![Задание2](https://github.com/SSitkarev/06-db-02-sql/blob/main/img/2-2.jpg)
+
+SQL-запрос для выдачи списка пользователей с правами над таблицами test_db;
+
+список пользователей с правами над таблицами test_db.
+
+![Задание2](https://github.com/SSitkarev/06-db-02-sql/blob/main/img/2-3.jpg)
+
+
+
+
+
+
+

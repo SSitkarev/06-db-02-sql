@@ -4,12 +4,12 @@ services:
   database:
     image: postgres:12
     container_name: pg_database
+    user: root
     ports: 
       - 5432:5432
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: netology
     volumes:
       - data:/var/lib/postgresql/data
       - backup:/var/lib/postgresql/backup
